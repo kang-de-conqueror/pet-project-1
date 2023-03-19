@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "703c9e55-8052-47bf-b8f4-501bff570dae",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User Authentication (Github)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/v1/auth/github",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"v1",
+						"auth",
+						"github"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get market cars",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:3001/v1/market-cars",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"v1",
+						"market-cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get market cars by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:3001/v1/market-cars/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"v1",
+						"market-cars",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update market cars by id",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:3001/v1/market-cars/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"v1",
+						"market-cars",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create market car",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"model\": \"Model Test\",\r\n    \"brand\": \"Brand Test\",\r\n    \"year\": \"2023\",\r\n    \"color\": \"Color Test\",\r\n    \"price\": 20000,\r\n    \"availableFrom\": \"2023-02-01\",\r\n    \"availableTo\": \"2023-02-05\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/v1/market-cars",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"v1",
+						"market-cars"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
